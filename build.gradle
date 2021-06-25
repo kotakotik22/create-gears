@@ -121,6 +121,7 @@ configurations {
 
 
 shadowJar {
+    archiveBaseName.set("gears")
     configurations = [project.configurations.shade]
     relocate 'com.tterrag.registrate', 'com.kotakotik.creategears.repack.registrate'
 }
