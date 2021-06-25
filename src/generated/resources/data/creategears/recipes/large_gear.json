@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "bwb",
+    "w w",
+    "bwb"
+  ],
+  "key": {
+    "w": {
+      "tag": "minecraft:planks"
+    },
+    "b": {
+      "tag": "minecraft:buttons"
+    }
+  },
+  "result": {
+    "item": "creategears:large_gear",
+    "count": 2
+  }
+}

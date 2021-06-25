@@ -28,7 +28,7 @@ public class GearsTiles extends Registration {
     @Override
     public void register() {
         GEAR = r.tileEntity("gear", SimpleKineticTileEntity::new)
-                .validBlock(GearsBlocks.GEAR)
+                .validBlocks(GearsBlocks.GEAR, GearsBlocks.LARGE_GEAR)
                 .register();
     }
 }

@@ -18,13 +18,16 @@ public class GearBlock extends CogWheelBlock implements ShapeUtils {
     public VoxelShape shape = cuboid(2.0D, 6.0D, 2.0D, 14.0D, 10.0D, 14.0D);
     public VoxelShaper shaper = new ShapeBuilder(shape).forAxis();
 
-    public GearBlock(Properties p_i48440_1_) {
-        super(false, p_i48440_1_);
+    public VoxelShape shapeLarge = cuboid(0.0D, 6.0D, 0.0D, 16.0D, 10.0D, 16.0D);
+    public VoxelShaper shaperLarge = new ShapeBuilder(shapeLarge).forAxis();
+
+    public GearBlock(boolean large, Properties p_i48440_1_) {
+        super(large, p_i48440_1_);
     }
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-        return shaper.get(state.get(AXIS));
+        return (isLargeCog() ? shaperLarge : shaper).get(state.get(AXIS));
     }
 
     @Override

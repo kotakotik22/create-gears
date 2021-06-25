@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "creategears:block/large_gear",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "creategears:block/large_gear"
+    },
+    "axis=z": {
+      "model": "creategears:block/large_gear",
+      "x": 90,
+      "y": 180
+    }
+  }
+}
