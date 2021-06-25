@@ -2,6 +2,7 @@ package com.kotakotik.creategears;
 
 import com.kotakotik.creategears.blocks.GearBlock;
 import com.kotakotik.creategears.regitration.GearsBlocks;
+import com.kotakotik.creategears.regitration.GearsPonder;
 import com.kotakotik.creategears.regitration.GearsTiles;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.simibubi.create.AllBlocks;
@@ -60,15 +61,13 @@ public class Gears {
     };
 
     public Gears() {
-        // registration
         MOD_EVENT_BUS = FMLJavaModLoadingContext.get().getModEventBus();
+        MOD_EVENT_BUS.addListener(Gears::clientInit);
 
+        // registration
         REGISTRATE.itemGroup(()->itemGroup, modid);
-
         new GearsBlocks(REGISTRATE).register();
         new GearsTiles(REGISTRATE).register();
-
-        MOD_EVENT_BUS.addListener(Gears::clientInit);
     }
 
     // oh my god please tell me future me actually put this into another class and didnt keep it glued on to this one
@@ -76,6 +75,7 @@ public class Gears {
     public static void clientInit(FMLClientSetupEvent event) {
         ClientRegistry.bindTileEntityRenderer(GearsTiles.GEAR.get(), KineticTileEntityRenderer::new);
         InstancedTileRenderRegistry.instance.register(GearsTiles.GEAR.get(), SingleRotatingInstance::new);
+        GearsPonder.register();
     }
 }
 
