@@ -59,6 +59,6 @@ A mod that adds gears to Create, like cogwheels but without the shaft part!
 [[dependencies.creategears]]
     modId = "create"
     mandatory = true
-    versionRange = "mc1.16.5_v0.3.1c+151" #idk lol
+    versionRange = "mc1.16.5_v0.3.1c" #idk lol
     ordering = "NONE"
     side = "BOTH"
