@@ -3,6 +3,7 @@ package com.kotakotik.creategears.regitration;
 import com.kotakotik.creategears.blocks.GearBlock;
 import com.kotakotik.creategears.util.Registration;
 import com.simibubi.create.AllBlocks;
+import com.simibubi.create.AllItems;
 import com.simibubi.create.AllTileEntities;
 import com.simibubi.create.content.contraptions.relays.elementary.BracketedKineticBlockModel;
 import com.simibubi.create.content.contraptions.relays.elementary.CogwheelBlockItem;
@@ -11,6 +12,7 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.Registrate;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
 import net.minecraft.data.ShapedRecipeBuilder;
+import net.minecraft.data.ShapelessRecipeBuilder;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.Tags;
@@ -39,6 +41,9 @@ public class GearsBlocks extends Registration {
                             .key('w', ItemTags.BUTTONS)
                             .addCriterion("has_cogwheels", prov.hasItem(AllBlocks.COGWHEEL.get()))
                             .build(prov);
+
+                    ctx.get().toCogwheelRecipe(AllBlocks.COGWHEEL.get(), prov);
+                    ctx.get().fromCogwheelRecipe(AllBlocks.COGWHEEL.get(), prov);
                 })
                 .register();
 
@@ -55,6 +60,9 @@ public class GearsBlocks extends Registration {
                             .key('b', ItemTags.BUTTONS)
                             .addCriterion("has_large_cogwheels", prov.hasItem(AllBlocks.LARGE_COGWHEEL.get()))
                             .build(prov);
+
+                    ctx.get().toCogwheelRecipe(AllBlocks.LARGE_COGWHEEL.get(), prov);
+                    ctx.get().fromCogwheelRecipe(AllBlocks.LARGE_COGWHEEL.get(), prov);
                 })
                 .register();
     }
