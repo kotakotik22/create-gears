@@ -6,9 +6,11 @@ import com.kotakotik.creategears.regitration.GearsPonder;
 import com.kotakotik.creategears.regitration.GearsTiles;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.simibubi.create.AllBlocks;
+import com.simibubi.create.Create;
 import com.simibubi.create.content.contraptions.base.KineticTileEntity;
 import com.simibubi.create.content.contraptions.base.KineticTileEntityRenderer;
 import com.simibubi.create.content.contraptions.base.SingleRotatingInstance;
+import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.render.backend.instancing.InstancedTileRenderRegistry;
 import com.simibubi.create.foundation.render.backend.instancing.InstancedTileRenderer;
 import com.simibubi.create.repack.registrate.Registrate;
@@ -53,7 +55,7 @@ public class Gears {
     public static final String modid = "creategears";
     public static IEventBus MOD_EVENT_BUS;
 
-    public final Registrate REGISTRATE = Registrate.create(modid);
+    public final CreateRegistrate REGISTRATE = CreateRegistrate.lazy(modid).get();
 
     public static ItemGroup itemGroup = new ItemGroup(modid) {
         @Override

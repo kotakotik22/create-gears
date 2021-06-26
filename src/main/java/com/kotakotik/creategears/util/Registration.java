@@ -1,12 +1,13 @@
 package com.kotakotik.creategears.util;
 
+import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.repack.registrate.Registrate;
 
 public abstract class Registration {
-    public final Registrate registrate;
-    public final Registrate r;
+    public final CreateRegistrate registrate;
+    public final CreateRegistrate r;
 
-    public Registration(Registrate r) {
+    public Registration(CreateRegistrate r) {
         this.registrate = r;
         this.r = registrate;
     }
