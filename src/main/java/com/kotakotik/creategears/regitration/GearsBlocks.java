@@ -78,7 +78,7 @@ public class GearsBlocks extends Registration {
 
         FULLY_ENCASED_CHAIN_DRIVE = r.block("fully_encased_chain_drive", FullyEncasedBeltBlock::new)
                 .transform(StressConfigDefaults.setNoImpact())
-                .item().model((ctx, prov) -> prov.blockItem(FULLY_ENCASED_CHAIN_DRIVE, "/item")).build() // TODO: the item model is cursed... please fix it
+                .item().model((ctx, prov) -> prov.blockItem(FULLY_ENCASED_CHAIN_DRIVE, "/item")).build()
                 .blockstate((c, p) ->  // i hope i never have to read this mess
                         (new EncasedBeltGenerator((state, suffix) ->
                                 p.models().getExistingFile(p.modLoc("block/" + c.getName() + "/" + c.get().getSuffix(suffix)
