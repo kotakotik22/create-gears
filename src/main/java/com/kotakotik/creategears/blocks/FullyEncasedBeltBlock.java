@@ -29,6 +29,7 @@ public class FullyEncasedBeltBlock extends EncasedBeltBlock {
     public String getSuffix(String suffix) {
         if(suffix.contains("horizontal")) return "horizontal";
         if(suffix.contains("vertical")) return "vertical";
+        if(suffix.contains("item")) return "item";
         return "horizontal"; // yes i know i know i can just remove the horizontal check above becaues its laywashfhjdhjkda ii dont care
     }
 }

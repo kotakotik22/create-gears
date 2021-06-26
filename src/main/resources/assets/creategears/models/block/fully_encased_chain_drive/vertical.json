@@ -1,5 +1,5 @@
 {
-	"credit": "Made with Blockbench",
+	"credit": "Modified version of https://github.com/Creators-of-Create/Create/blob/90cdbe6941ba597559423fc767e1e3c56375ef11/src/main/resources/assets/create/models/block/encased_chain_drive/middle_vertical.json",
 	"parent": "block/block",
 	"textures": {
 		"side": "create:block/encased_chain_drive",

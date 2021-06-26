@@ -1,5 +1,5 @@
 {
-	"credit": "Made with Blockbench",
+	"credit": "Modified versino of https://github.com/Creators-of-Create/Create/blob/mc1.16/dev/src/main/resources/assets/create/models/block/encased_chain_drive/middle_horizontal.json",
 	"parent": "block/block",
 	"textures": {
 		"side": "create:block/encased_chain_drive",
@@ -13,7 +13,7 @@
 			"faces": {
 				"north": {"uv": [0, 16, 16, 0], "rotation": 180, "texture": "#side"},
 				"east": {"uv": [0, 0, 16, 16], "texture": "#side"},
-				"south": {"uv": [0, 16, 16, 0], "texture": "#side"},
+				"south": {"uv": [0, 16, 16, 0], "rotation": 90, "texture": "#side"},
 				"west": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#side"},
 				"up": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#side"},
 				"down": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#side"}
