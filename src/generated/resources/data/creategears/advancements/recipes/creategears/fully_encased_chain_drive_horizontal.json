@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "creategears:fully_encased_chain_drive_horizontal"
+    ]
+  },
+  "criteria": {
+    "has_shaft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "create:shaft"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "creategears:fully_encased_chain_drive_horizontal"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_shaft",
+      "has_the_recipe"
+    ]
+  ]
+}

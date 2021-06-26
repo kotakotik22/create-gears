@@ -10,7 +10,6 @@ import com.simibubi.create.content.contraptions.relays.elementary.CogwheelBlockI
 import com.simibubi.create.content.contraptions.relays.encased.EncasedBeltGenerator;
 import com.simibubi.create.foundation.config.StressConfigDefaults;
 import com.simibubi.create.foundation.data.*;
-import com.simibubi.create.repack.registrate.Registrate;
 import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.data.ShapedRecipeBuilder;
@@ -72,6 +71,20 @@ public class GearsBlocks extends Registration {
                         (new EncasedBeltGenerator((state, suffix) ->
                                 p.models().getExistingFile(p.modLoc("block/" + c.getName() + "/" + c.get().getSuffix(suffix)
                                 )))).generate(c, p))
+                .recipe((ctx, prov) -> {
+                    ctx.get().fullyEncasedChainDriveRecipe(
+                            ctx.get().fullyEncasedChainDriveRecipe(prov)
+                                .patternLine("s")
+                                .patternLine("c")
+                                .patternLine("s"),
+                            prov, "vertical");
+
+                    ctx.get().fullyEncasedChainDriveRecipe(
+                            ctx.get().fullyEncasedChainDriveRecipe(prov)
+                                    .patternLine("scs"),
+                            prov, "horizontal"
+                    );
+                })
                 .register();
 
         SIMPLE_GEARSHIFT = r.block("simple_gearshift", SimpleGearshiftBlock::new)
@@ -80,6 +93,20 @@ public class GearsBlocks extends Registration {
                 .transform(StressConfigDefaults.setNoImpact())
                 .item().model((ctx, prov) -> prov.blockItem(SIMPLE_GEARSHIFT, "/item")).build()
                 .blockstate((c, p) -> BlockStateGen.axisBlock(c, p, (b) -> p.models().getExistingFile(p.modLoc("block/simple_gearshift/block"))))
+                .recipe((ctx, prov) -> {
+                     ctx.get().recipe(
+                             ctx.get().recipe(prov)
+                                .patternLine("w")
+                                .patternLine("c")
+                                .patternLine("w"),
+                             prov, "vertical");
+
+                     ctx.get().recipe(
+                             ctx.get().recipe(prov)
+                                .patternLine("wcw"),
+                             prov, "horizontal"
+                     );
+                })
                 .register();
     }
 }
