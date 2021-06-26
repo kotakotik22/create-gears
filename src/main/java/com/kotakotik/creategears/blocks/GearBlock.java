@@ -22,7 +22,6 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorldReader;
 
 public class GearBlock extends CogWheelBlock implements ShapeUtils, GenericUtils {
-    // TODO use shapes from AllShapes instead of creating my own
     public VoxelShape shape = cuboid(2.0D, 6.0D, 2.0D, 14.0D, 10.0D, 14.0D);
     public VoxelShaper shaper = new ShapeBuilder(shape).forAxis();
 
