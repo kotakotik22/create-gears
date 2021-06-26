@@ -41,6 +41,8 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.stream.Collectors;
 
+import static com.simibubi.create.repack.registrate.providers.RegistrateLangProvider.toEnglishName;
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Gears.modid)
 public class Gears {
@@ -65,7 +67,7 @@ public class Gears {
         MOD_EVENT_BUS.addListener(Gears::clientInit);
 
         // registration
-        REGISTRATE.itemGroup(()->itemGroup, modid);
+        REGISTRATE.itemGroup(()->itemGroup, "Create Gears");
         new GearsBlocks(REGISTRATE).register();
         new GearsTiles(REGISTRATE).register();
     }

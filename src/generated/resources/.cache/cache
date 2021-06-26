@@ -1,7 +1,7 @@
 00ca0d509864a18a27cb129601a6a76f311877c8 assets/creategears/blockstates/gear.json
 f20af6c0108e2aa8b167d94e8fd4059bd1b8d681 assets/creategears/blockstates/large_gear.json
-01abbb302bcc3c085a189de15e664d9beee1c3f2 assets/creategears/lang/en_ud.json
-d9d047cb18e9e922f849719a1c85a1aa3048bb36 assets/creategears/lang/en_us.json
+a5ec3b19f77a38441f19e322b7c570dd1d16c1f2 assets/creategears/lang/en_ud.json
+ea5730469d26d8a8749d04247765f8833ff21c60 assets/creategears/lang/en_us.json
 e6070192e5fb57053261e50d2257a9e451ca0be3 assets/creategears/models/item/gear.json
 ccf53177c583a92689ac864364b79a70b923ef52 assets/creategears/models/item/large_gear.json
 7d14064ac9543728f23dd17400e74436b678ba4b data/creategears/advancements/recipes/create.base/gear_to_cogwheel.json
