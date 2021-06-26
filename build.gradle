@@ -143,6 +143,7 @@ def reobfArtifact = artifacts.add('default', reobfFile) {
 
 build.dependsOn deobfJar
 build.dependsOn shadowJar
+shadowJar.dependsOn
 
 repositories {
     mavenLocal()
@@ -196,3 +197,7 @@ jar {
 
 
 jar.finalizedBy('reobfJar')
+
+artifacts {
+    archives deobfJar
+}
