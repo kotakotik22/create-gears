@@ -24,8 +24,16 @@ public class GearsPonder {
                 .addStoryBoard("cog/small", KineticsScenes::cogAsRelay)
                 .addStoryBoard("cog/large", KineticsScenes::largeCogAsRelay);
 
+        PonderRegistry.forComponents(GearsBlocks.FULLY_ENCASED_CHAIN_DRIVE)
+                .addStoryBoard("chain_drive/relay", ChainDriveScenes::chainDriveAsRelay);
+
+        PonderRegistry.forComponents(GearsBlocks.SIMPLE_GEARSHIFT)
+                .addStoryBoard("gearshift", KineticsScenes::gearshift);
+
         PonderRegistry.tags.forTag(PonderTag.KINETIC_RELAYS)
                 .add(GearsBlocks.GEAR)
-                .add(GearsBlocks.LARGE_GEAR);
+                .add(GearsBlocks.LARGE_GEAR)
+                .add(GearsBlocks.FULLY_ENCASED_CHAIN_DRIVE)
+                .add(GearsBlocks.SIMPLE_GEARSHIFT);
     }
 }
