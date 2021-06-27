@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.kotakotik.creategears.cogwheeltweakercompat.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "hackforge.refmap.json",
+  "mixins": [
+    "CogwheelBuildMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
