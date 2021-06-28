@@ -34,7 +34,9 @@ public class GearsTiles extends Registration {
     @Override
     public void register() {
         GEAR = r.tileEntity("gear", SimpleKineticTileEntity::new)
+                .instance(() -> SingleRotatingInstance::new)
                 .validBlocks(GearsBlocks.GEAR, GearsBlocks.LARGE_GEAR)
+                .renderer(() -> KineticTileEntityRenderer::new)
                 .register();
 
         FULLY_ENCASED_BELT = r.tileEntity("fully_encased_shaft", EncasedShaftTileEntity::new)

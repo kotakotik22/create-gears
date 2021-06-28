@@ -6,6 +6,7 @@ import com.kotakotik.creategears.util.GenericUtils;
 import com.kotakotik.creategears.util.ShapeBuilder;
 import com.kotakotik.creategears.util.ShapeUtils;
 import com.simibubi.create.AllItems;
+import com.simibubi.create.AllShapes;
 import com.simibubi.create.content.contraptions.relays.elementary.CogWheelBlock;
 import com.simibubi.create.foundation.utility.VoxelShaper;
 import com.simibubi.create.repack.registrate.providers.RegistrateRecipeProvider;

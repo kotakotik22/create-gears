@@ -22,25 +22,4 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class CTCRegistration {
     public void r() {
     }
-
-//    @SubscribeEvent
-//    public static void onTileEntityRegistry(final RegistryEvent.Register<TileEntityType<?>> event) {
-//        event.getRegistry().register(TileEntityType.Builder.create(CoTWheelTileEntity::new,
-//                CoTWheelTileEntity.validBlocks.toArray(new Block[0])).build(null).setRegistryName("cotgear"));
-//    }
-
-
-//    @OnlyIn(Dist.CLIENT)
-//    @SubscribeEvent
-//    public static void clientInit(FMLClientSetupEvent event) {
-//        ClientRegistry.bindTileEntityRenderer(ObjectHolders.COTWHEEL_TILE, KineticTileEntityRenderer::new);
-//        InstancedTileRenderRegistry.instance.register(ObjectHolders.COTWHEEL_TILE, SingleRotatingInstance::new);
-//    }
-
-    @SubscribeEvent
-    @OnlyIn(Dist.CLIENT)
-    public static void onModelBake(ModelBakeEvent event) {
-        CoTWheelTileEntity.validBlocks.
-                forEach(block -> CreateClient.getCustomBlockModels().register(block.delegate, BracketedKineticBlockModel::new));
-    }
 }

@@ -8,6 +8,7 @@ import com.simibubi.create.content.contraptions.base.KineticTileEntityRenderer;
 import com.simibubi.create.content.contraptions.base.SingleRotatingInstance;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.render.backend.instancing.InstancedTileRenderRegistry;
+import com.tterrag.registrate.util.OneTimeEventReceiver;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -47,7 +48,6 @@ public class Gears {
 
         // events
         MOD_EVENT_BUS = FMLJavaModLoadingContext.get().getModEventBus();
-        MOD_EVENT_BUS.addListener(Gears::clientInit);
 
         if(isCogwheelTweakerLoaded) {
             CTCRegistration r = new CTCRegistration();
@@ -63,14 +63,10 @@ public class Gears {
         REGISTRATE.itemGroup(()->itemGroup, "Create Gears");
         new GearsBlocks(REGISTRATE).register();
         new GearsTiles(REGISTRATE).register();
-    }
 
-    // oh my god please tell me future me actually put this into another class and didnt keep it glued on to this one
-    // TODO DO THIS ^^^^^^^^^^^^^^^^^^^
-    public static void clientInit(FMLClientSetupEvent event) {
-        ClientRegistry.bindTileEntityRenderer(GearsTiles.GEAR.get(), KineticTileEntityRenderer::new);
-        InstancedTileRenderRegistry.instance.register(GearsTiles.GEAR.get(), SingleRotatingInstance::new);
-        GearsPonder.register();
+        OneTimeEventReceiver.addListener(MOD_EVENT_BUS, FMLClientSetupEvent.class, ($) -> {
+            GearsPonder.register();
+        });
     }
 }
 
