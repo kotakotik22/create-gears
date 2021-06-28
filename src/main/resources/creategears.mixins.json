@@ -4,7 +4,6 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "hackforge.refmap.json",
   "mixins": [
-    "CogwheelBuildMixin"
   ],
   "injectors": {
     "defaultRequire": 1
