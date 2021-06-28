@@ -10,8 +10,7 @@ import org.openzen.zencode.java.ZenCodeType;
 
 import javax.annotation.Nullable;
 
-@ZenRegister(modDeps = {"contenttweaker", "cogwheeltweaker"})
-@ZenCodeType.Name("mods.creategears.block.gear.GearBuilder")
+@ZenCodeType.Name("mods.creategears.block.gear.GearBuilderReal")
 @SuppressWarnings("unused")
 public class GearBuilder extends CoTWheelBuilder {
     private boolean noCog = false;

@@ -1,5 +1,6 @@
 package com.kotakotik.creategears;
 
+import com.blamejared.crafttweaker.api.zencode.impl.registry.ZenClassRegistry;
 import com.kotakotik.creategears.cogwheeltweakercompat.CTCRegistration;
 import com.kotakotik.creategears.regitration.GearsBlocks;
 import com.kotakotik.creategears.regitration.GearsPonder;
@@ -8,7 +9,7 @@ import com.simibubi.create.content.contraptions.base.KineticTileEntityRenderer;
 import com.simibubi.create.content.contraptions.base.SingleRotatingInstance;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.render.backend.instancing.InstancedTileRenderRegistry;
-import com.tterrag.registrate.util.OneTimeEventReceiver;
+import com.simibubi.create.repack.registrate.util.OneTimeEventReceiver;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
